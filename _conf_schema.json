@@ -1,0 +1,32 @@
+{
+  "enable": {
+    "description": "插件总开关：关闭后不做任何处理（恢复 AstrBot 原生行为，泄漏的文本会照常发出去）",
+    "type": "bool",
+    "default": true
+  },
+  "convert": {
+    "description": "把文本形式的工具调用还原成原生工具调用并真的执行；关闭后只把这段文本摘掉、不执行",
+    "type": "bool",
+    "default": true
+  },
+  "allow_with_leftover_text": {
+    "description": "块外面还有别的正文时也允许还原（默认只处理「整条回复就是调用块」；放宽后可能把正常解释文字也吞掉）",
+    "type": "bool",
+    "default": false
+  },
+  "strip_when_not_convertible": {
+    "description": "工具名对不上、没有可用工具、或解析失败时，仍然把这段文本摘掉（保证绝不让它进群）",
+    "type": "bool",
+    "default": true
+  },
+  "dry_run": {
+    "description": "演习模式：只记日志说明「本可还原」，不改动响应（用于上线初期观察命中情况）",
+    "type": "bool",
+    "default": false
+  },
+  "log_raw": {
+    "description": "命中时把原始文本截断打到日志，便于排查",
+    "type": "bool",
+    "default": true
+  }
+}

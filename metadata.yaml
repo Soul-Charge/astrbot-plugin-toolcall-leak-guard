@@ -1,0 +1,5 @@
+name: astrbot_plugin_toolcall_leak_guard
+desc: 模型把工具调用写成文本时，先摘掉不让它漏进群，再还原成原生工具调用继续执行
+version: v1.0.0
+author: NaE
+repo: ""
